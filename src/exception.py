@@ -2,6 +2,7 @@ import sys
 from src.logger import logging
 
 def error_message_detail(error,error_details:sys):
+    #error_details is annotated with type sys, indicating that it should be an instance of sys module. 
     _,_,exc_tb= error_details.exc_info() #where(file,line) exception has occured
 
     file_name = exc_tb.tb_frame.f_code.co_filename
